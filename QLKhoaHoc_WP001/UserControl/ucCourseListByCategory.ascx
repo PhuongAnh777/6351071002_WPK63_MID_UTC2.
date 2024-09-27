@@ -12,7 +12,7 @@
             <asp:Label ID="Label" runat="server" Text='<%# Eval("Name") %>' CssClass="" /><br/>
             <asp:Image ID="Image2" runat="server" Width ="100px" Height="100px" ImageUrl='<%# "~/images/Courses/" + Eval("ImageFilePath")%>' /><br/>
             <asp:Label ID="Label2" runat="server" Text='<%# Eval("Duration") %>' CssClass="" /><br/>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/Details.aspx?id = " + Eval("id") %>' CssClass="">Show detail</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/Details.aspx?id=" + Eval("ID") %>' CssClass="">Show detail</asp:HyperLink>
         </td>
     </ItemTemplate>
     <LayoutTemplate>

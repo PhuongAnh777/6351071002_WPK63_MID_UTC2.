@@ -10,6 +10,9 @@
         <asp:Label ID="Label5" runat="server" Text='<%# Eval("Description") %>'></asp:Label><br />
     </ItemTemplate>
 </asp:FormView>
-<asp:EntityDataSource ID="DetailCourseEntityDataSource" runat="server" ConnectionString="name=QLKhoaHocEntities" DefaultContainerName="QLKhoaHocEntities" EnableFlattening="False" EntitySetName="Course" Include="Category">
+<asp:EntityDataSource ID="DetailCourseEntityDataSource" runat="server" ConnectionString="name=QLKhoaHocEntities" DefaultContainerName="QLKhoaHocEntities" EnableFlattening="False" EntitySetName="Course" Include="Category" EntityTypeFilter="" Select="" Where="it.ID=@CourseID">
+    <WhereParameters>
+        <asp:QueryStringParameter Name="CourseID" QueryStringField="id" Type="Int32" />
+    </WhereParameters>
 </asp:EntityDataSource>
 
