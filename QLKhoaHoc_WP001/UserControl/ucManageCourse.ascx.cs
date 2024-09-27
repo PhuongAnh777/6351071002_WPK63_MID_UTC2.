@@ -34,29 +34,6 @@ namespace de1.UserControl
         }
         protected void ButtonAddNew_Click(object sender, EventArgs e)
         {
-            string errorMessage = "";
-            if (string.IsNullOrWhiteSpace(TextBoxName.Text))
-            {
-                errorMessage += "Không được để trống tên khóa học. ";
-            }
-            if (string.IsNullOrWhiteSpace(TextBoxDurian.Text))
-            {
-                errorMessage += "Thời lượng khóa học chưa nhập. ";
-            }
-            if (DropDownListCategory.SelectedValue == "-1") 
-            {
-                errorMessage += "Vui lòng chọn danh mục. ";
-            }
-            if (string.IsNullOrWhiteSpace(TextBoxDescription.Text))
-            {
-                errorMessage += "Không được để trống mô tả. ";
-            }
-
-            if (!string.IsNullOrEmpty(errorMessage))
-            {
-                LabelError.Text = errorMessage; 
-                return;
-            }
             string filename = "";
             if (FileUploadPicture.HasFile)
             {
